@@ -1,0 +1,48 @@
+# Keywords:
+# split  - splits value to child nodes according to their shares ratio
+# shares - number of shares for a node (used to calculate shares ratio amongst sibling nodes)
+# crypto - pay value to the node directly to a crypto currency address
+# passcard - pay value to the node directly to one of the addresses specified as 'payments' in the passcard
+# url - pay value according to instructions defined in this url. if url is "hold" then hold the funds for later distribution.
+
+# Nodes are defined in a list, prefixed by '-'. The node name must not be a keyword
+# Each node must contain a nested 'shares' and may contain one of 'crypto','url','passcard'
+
+split:
+  # Author
+  - ktorn:
+      shares: 50
+      # the passcard should have at least one 'payments' item, ideally 'bitcoin'
+      passcard: +ktorn
+
+  # Dependencies
+  - deps:
+      shares: 10
+      split:
+        - protocols:
+            shares: 1
+            split:
+              - http:
+                  shares: 1
+                  # when a node doesn't have pay instructions, default is save value for later claim
+                
+              - bitcoin:
+                  shares: 1
+                  # example only - this URL doesn't exist
+                  url: https://github.com/bitcoin/bitcoin/VALUE.yaml
+                
+              - passcard:
+                  shares: 1
+                  # example only - this URL doesn't exist
+                  url: https://github.com/namesystem/namesystem/VALUE.yaml
+
+  # Project contributors
+  - contrib:
+      shares: 40
+      split:
+        - marcoleong:
+            shares: 100
+            crypto: bitcoin/1ReplaceWithRealAddyivLSeYbv43Tj8N
+            
+
+
