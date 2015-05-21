@@ -31,7 +31,7 @@ split:
                   # example only - this URL doesn't exist
                   url: https://github.com/bitcoin/bitcoin/VALUE.yaml
                 
-              - passcard:
+              - namesystem:
                   shares: 1
                   # example only - this URL doesn't exist
                   url: https://github.com/namesystem/namesystem/VALUE.yaml
