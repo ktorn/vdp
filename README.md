@@ -1,2 +1,2 @@
-# vcdp
-Value Chain Distribution Protocol
+# vdp
+Value Distribution Protocol
