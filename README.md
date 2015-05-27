@@ -13,5 +13,5 @@ Reference implementation: http://subsatoshi.org
 
 ---
 
-Previously known as: [*"Revenue Sharing Distribution Protocol" (RSDP)*](https://github.com/ABISprotocol/ABIS/issues/1) and [*"Value Chain Distribution Protocol" (VCDP)*](https://github.com/ktorn/vcdp)
+Previously known as: [*"Cascading Revenue Sharing Protocol" (CRSP)*](https://github.com/ABISprotocol/ABIS/issues/1) and [*"Value Chain Distribution Protocol" (VCDP)*](https://github.com/ktorn/vcdp)
 
