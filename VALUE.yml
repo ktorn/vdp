@@ -39,6 +39,10 @@ split:
             # example only - this URL doesn't exist
             url: https://github.com/bitcoin/bitcoin/VALUE.yaml
 
+          - id: namecoin
+            shares: 1
+            crypto: bitcoin/17Si1rdVd6gaYbwLq9NkXtGV9Qzt3NmTKa
+
           - id: namesystem
             shares: 1
             # example only - this URL doesn't exist
