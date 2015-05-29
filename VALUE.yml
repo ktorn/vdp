@@ -14,7 +14,7 @@
 # How relative value is calculated: each node's value ratio is calculated according to the shares of all the nodes at the same depth (siblings)
 
 version: 1
-description: hk blockchain hackathon 2015 - first prize split - stack
+description: value distribution protocol
 
 split:
   # Author
