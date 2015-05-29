@@ -1,48 +1,53 @@
 # Keywords:
+# version: protocol version, must appear only at the root
+# description: optinal description, can appear at any node
 # split  - splits value to child nodes according to their shares ratio
 # shares - number of shares for a node (used to calculate shares ratio amongst sibling nodes)
 # crypto - pay value to the node directly to a crypto currency address
-# passcard - pay value to the node directly to one of the addresses specified as 'payments' in the passcard
-# url - pay value according to instructions defined in this url. if url is "hold" then hold the funds for later distribution.
+# passcard - pay value to the node directly to one of the addresses specified in the passcard (may later turn this into url)
+# namecoin - pay value according to instructions defined in this namecoin record. if record does not exist then hold the funds for later distribution.
+# url - pay value according to instructions defined in this url. if url returns 404 or other error then hold the funds for later distribution.
 
 # Nodes are defined in a list, prefixed by '-'. The node name must not be a keyword
 # Each node must contain a nested 'shares' and may contain one of 'crypto','url','passcard'
 
+# How relative value is calculated: each node's value ratio is calculated according to the shares of all the nodes at the same depth (siblings)
+
+version: 1
+description: hk blockchain hackathon 2015 - first prize split - stack
+
 split:
   # Author
-  - ktorn:
-      shares: 50
-      # the passcard should have at least one 'payments' item, ideally 'bitcoin'
-      passcard: +ktorn
+  - id: ktorn
+    shares: 50
+    # the passcard should have a 'bitcoin:address' element
+    passcard: +ktorn
 
   # Dependencies
-  - deps:
-      shares: 10
-      split:
-        - protocols:
+  - id: deps
+    shares: 10
+    split:
+      - id: protocols
+        shares: 1
+        split:
+          - id: http
             shares: 1
-            split:
-              - http:
-                  shares: 1
-                  # when a node doesn't have pay instructions, default is save value for later claim
-                
-              - bitcoin:
-                  shares: 1
-                  # example only - this URL doesn't exist
-                  url: https://github.com/bitcoin/bitcoin/VALUE.yaml
-                
-              - namesystem:
-                  shares: 1
-                  # example only - this URL doesn't exist
-                  url: https://github.com/namesystem/namesystem/VALUE.yaml
+            # when a node doesn't have pay instructions, default is save value for later claim
+
+          - id: bitcoin
+            shares: 1
+            # example only - this URL doesn't exist
+            url: https://github.com/bitcoin/bitcoin/VALUE.yaml
+
+          - id: namesystem
+            shares: 1
+            # example only - this URL doesn't exist
+            url: https://github.com/namesystem/namesystem/VALUE.yaml
 
   # Project contributors
-  - contrib:
-      shares: 40
-      split:
-        - marcoleong:
-            shares: 100
-            crypto: bitcoin/1EGisKrfTjD72gHhvAhWDNq5mLyUZ9VcUe
-            
-
-
+  - id: contrib
+    shares: 40
+    split:
+      - id: marcoleong
+        shares: 100
+        crypto: bitcoin/1EGisKrfTjD72gHhvAhWDNq5mLyUZ9VcUe
