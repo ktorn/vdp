@@ -24,7 +24,7 @@ The core element of the protocol is the *VDP configuration file*, which defines 
 
 ![VDP example 1](images/vdp-example1.png)
 
-The `shares` of a stakeholder are relative its sibling stakeholders. In the above example, the sibling stakeholders `ktorn` and `marcoleong` each have 1 share, which means they split 50% of the value attributed to `contributors`, which itself is 97% of the overall value.
+The `shares` of a stakeholder are relative to its sibling stakeholders. In the above example, the sibling stakeholders `ktorn` and `marcoleong` each have 1 share, which means they split 50% of the value attributed to `contributors`, which itself is 97% of the overall value.
 
 Stakeholders can have their value paid directly to `crypto`currency addresses, such as `bitcoin`, or according to separate VDP files linked via the `url` keyword. This effectively creates hyperlinked VDP files.
 
