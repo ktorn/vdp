@@ -43,11 +43,11 @@ A VDP payment processor simply takes one or more VDP files as input, and for eac
 ##Use Cases
 
 
-###Free and Open Source Software (FOSS) Funding
+###Free/Libre Software (FLS) and Open Source Software (OSS) Funding
 
-Many for-profit projects, especially software, depend on a variety of open source projects. The creators of these businesses and projects know this, yet cannot identify who they should donate to, given the huge variety of projects and their contributors.
+Many for-profit projects, especially software, depend on a variety of FLS/OSS projects. The creators of these businesses and projects know this, yet cannot identify who they should donate to, given the huge variety of projects and their contributors.
 
-In this context VDP can be used to fairly distribute donations to the open source stack. Each company simply needs to define their top-level stack, and link to the various projects' existing VDP files.
+In this context VDP can be used to fairly distribute donations to the FLS/OSS stack. Each company simply needs to define their top-level stack, and link to the various projects' existing VDP files.
 
 Each project will take care of maintaining their own VDP files, attributing credit to both sub-dependencies, as well as direct contributors.
 
