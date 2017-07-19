@@ -1,8 +1,8 @@
 
-#Value Distribution Protocol (VDP)
+# Value Distribution Protocol (VDP)
 
 
-##News
+## News
 
 **31 May 2015** - The first VDP transaction. Hackcoin's first prize (1 BTC) was [awarded](https://blockchain.info/tx/d0b6d74e5aa2878b1b0ddb5efcf547ff0b4d4e7803fbec17f576e6a9c16d9593) and automatically [distributed](https://blockchain.info/tx/d361c67cde43f6538fa92a50177a0600c704172c4abfe4dabe457eb14c949539) to the team using our [demo VDP file](https://github.com/macausource/subsatoshi/blob/hackathon/examples/hackathon-prize.yml).
 
@@ -14,7 +14,7 @@
 
 ---
 
-##About VDP
+## About VDP
 
 VDP is a simple protocol that defines how value should be divided amongst various stakeholders.
 
@@ -40,10 +40,10 @@ A VDP payment processor simply takes one or more VDP files as input, and for eac
 
 ![VDP payment processor](images/vdp-payment-processor.png)
 
-##Use Cases
+## Use Cases
 
 
-###Free/Libre Software (FLS) and Open Source Software (OSS) Funding
+### Free/Libre Software (FLS) and Open Source Software (OSS) Funding
 
 Many for-profit projects, especially software, depend on a variety of FLS/OSS projects. The creators of these businesses and projects know this, yet cannot identify who they should donate to, given the huge variety of projects and their contributors.
 
@@ -59,13 +59,13 @@ One of the best aspects of this approach is that "invisible" projects which are 
 
 This use case was presented at [HackCoin 2015](https://www.bitcoinhk.org/2015-hackcoin-results/) and the prize money (1 BTC) was [instantly distributed](https://blockchain.info/tx/d361c67cde43f6538fa92a50177a0600c704172c4abfe4dabe457eb14c949539) using a [basic implementation](https://github.com/macausource/subsatoshi/tree/hackathon) of the protocol, which included a 3% donation towards both [GPG](https://www.gnupg.org/) and the [Free Software Foundation](http://www.fsf.org).
 
-##Implementations
+## Implementations
 
 * [http://subsatoshi.org](http://subsatoshi.org) - currently only contains the [PoC code](https://github.com/macausource/subsatoshi/tree/hackathon) used at the hackathon.
 
 ---
 
-###TODOs:
+### TODOs:
 * Add more examples and use cases
 
 ---
